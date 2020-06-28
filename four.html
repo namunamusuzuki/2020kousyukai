@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>4章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         </nav>
+         </nav>
+       <main>
+            <h1>目標</h1>
+            <div class="paragraph">
+               
+                <p>　コンソール画面から文字、数字を入力できるようになる。</p><br />
+            </div>
+            <h3>語句説明</h3>
+            <div class="paragraph">
+                <h2>標準入力</h2>
+                <p>　コンソール画面でのキーボードによる入力のこと。</p>
+            </div>
+            <h3>サンプル</h3>
+            <code><pre>
+#include &ltiostream&gt
+#include &ltstring&gt
+
+int main(void){
+  int a,b;
+
+  std::cin >> a >> b;
+  std::cout << a+b << " " << a-b << " " << a*b << " " << a/b << std::endl;
+
+
+  std::string c,d;
+  std::cin >> c >> d;
+  std::cout << c+d << std::endl;
+
+  return 0;
+}
+            </code></pre>
+            <h3>サンプル解説</h3>
+            <div class="paragraph">
+                <h2>std::cin</h2>
+                <p>
+					　std::cinは>>の後にある変数にコンソール画面に入力された値を入れることができます。<br />
+					　入力するもの同士は>>で区切ります。入力する際はコンソール画面に値を入れた後Enterキーを押してください。
+                </p><br />
+            </div>
+            <p class="description">
+			    std::cin >> a >> b;<br />
+				a,bにそれぞれ値が入力されます。改行やスペース、タブが入力の区切りとして扱われます。<br />
+            </p><br />
+            <h5>課題</h5>
+            <div class="paragraph">
+                <ul>
+                    <li>・サンプルコードを実行して出力を確かめる。</li>
+                    <li>・名前を入力すると「○○さん、こんにちは。」と表示されるようにする。</li>
+                    <li><strong>要提出</strong>・5教科の点数をそれぞれ入力すると平均を出力するプログラムを作る。</li>
+                </ul>
+            </div><br />
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

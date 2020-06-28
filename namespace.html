@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>名前空間</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         <main>
+            <h3>名前空間</h3>
+            <div class="paragraph">
+                <h3>名前空間(namespace)とは</h3>
+                <p>イメージ</p>
+                <img src="std.PNG" width="400" height="250">
+                <p>
+                    　皆さんが何気なく使っている"std"は名前空間の名称です。一般的にC++に標準搭載されているライブラリの構文は"std"の中に入っています。<br />
+                    　名前空間の中に入っている構文は通常、構文の前に"名前::"を付けないといけません。(ex std::cout)
+                </p>
+                <h3>名前空間の作り方</h3>
+                <code><pre>
+#include &ltiostream&gt
+
+namespace a{
+	class b{
+	public:
+		int c;
+	};
+}
+
+int main(void){
+	a::b d;
+
+	d.c = 10;
+	
+	std::cout << d.c << std::endl;
+
+	return 0;
+}
+                </code></pre> 
+                <p class="description">
+               namespace 名称{<br />
+                    　　中に入れるものを書く。<br />
+                    }
+            </p><br />
+                
+                <p>
+                    　名前空間を使うことによって、その構文がどのような役割を持っているかまとめて区別することができます。<br />
+                    　ちなみに名前空間を名前空間で囲うこともできます。
+                </p>
+                <h2>using namespace std;</h2>
+                <p>
+                    　分からないときに検索するとよくこの構文が出てきます。この構文の役割は"std"という名前空間を区別しなくてよくなることです。<br />
+                    　例えば、"std::cout"を"cout"だけで使えるようになります。<br />
+                    　これを使う利点としてはコードを書く量が短くなるため、競技プログラミングなどでよく使用されます。<br />
+                    　しかし、複数のライブラリを使う規模の大きい開発の場合には、多用しすぎることでコードが見づらくなってしまったり、別の名前空間内にある同じ構文にてどのように動くか分からなくなってしまうことがあるので、なるべく使わないように心がけましょう。
+                </p>
+            </div>
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

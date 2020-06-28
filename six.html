@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>6章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         </nav>
+         </nav>
+      <main>
+            <h1>目標</h1>
+            <div class="paragraph">
+         
+                <p>　同じ処理を決めた回数繰り返すことができるようになる。。</p><br />
+            </div>
+            <h3>語句説明</h3>
+				<div class="paragraph">
+					<h4>カウンター</h4>
+					<p>
+                        　任意の回数繰り返すとき、何回繰り返したか保存しておくため使われる。<br />
+                        　慣習的に、カウンターの変数名はi以降の1文字の小文字アルファベットになります。
+                    </p><br />
+				</div>
+            <h3>サンプル1</h3>
+            <code><pre>
+#include &ltiostream&gt
+
+int main(void){
+
+    std::cout << "Hello_World!!  " << 1 << std::endl;
+    std::cout << "Hello_World!!  " << 2 << std::endl;
+    std::cout << "Hello_World!!  " << 3 << std::endl;
+    std::cout << "Hello_World!!  " << 4 << std::endl;
+    std::cout << "Hello_World!!  " << 5 << std::endl;
+
+    for(int i = 1; i <= 5; i++){
+        std::cout << "Hello_World!!  " << i << std::endl;
+    }
+
+    return 0;
+
+}
+            </code></pre>
+            <h3>サンプル1解説</h3>
+            <div class="paragraph">
+                <h2>for(;;)</h2>
+                <p>
+					　forは、{}の中にある処理を繰り返す文です。<br />
+                    　for(変数の宣言、初期化;条件式;変数の変化){<br />
+                    　　　処理<br />
+                    　}<br />
+                    　変数の宣言では、繰り返すときのカウンターにする変数を宣言します。<br />
+                    　forは、指定した条件式がtrueの間繰り返されます。<br />
+                    　変数の変化は主にカウンターを増加、減少させるときに使います。<br />
+                </p>
+                <p class="p-description">
+                    1:for(int i = 0; i < 5; i++){ iが1ずつ増加していく。<br />
+                    このなかで繰り返したい処理を行う。<br />
+                    2:}<br />
+                </p><br />
+                <h4>中身</h4>
+                <p class="p-description">
+                    4:std::cout << "Hello_World!!  " << 1 << std::endl;から<br />
+                    8:std::cout << "Hello_World!!  " << 5 << std::endl;までと、<br />
+                    10:for(int i = 1; i <= 5; i++){<br />
+                    11:　　std::cout << "Hello_World!!  " << i << std::endl;<br />
+                    12:}<br />
+                    の意味は全く変わらない。
+                </p></div>
+          
+            
+			<h3>サンプル2</h3>
+            <code><pre>
+#include &ltiostream&gt
+
+
+int main(void){
+    int input = 1, sum = 0;
+
+    while(input != 0){
+        std::cin >> input;
+        sum += input;
+    }
+
+    std::cout << sum << std::endl;
+    
+    return 0;
+
+}
+            </code></pre>
+            <h3>サンプル2解説</h3>
+            <div class="paragraph">
+                <h2>while()</h2>
+                <p>
+					　whileは、{}の中にある処理を繰り返す文です。<br />
+                    　while(条件式){<br />
+                    　処理<br />
+                    　}<br />
+                    　whileは、指定した条件式がtrueの間繰り返されます。<br />
+                    　主に何回繰り返すか分からない処理に使われます。
+                </p>
+                <h4>中身</h4>
+                <p class="p-description">
+                    1:while(input != 0){ inputが0以外のときtrue。<br />
+                    このなかで繰り返したい処理を行う。<br />
+                    2:}<br />
+                </p><br />
+                <p>　入力が0でない間、入力された数字を加算することを繰り返します。</p><br />
+            </div>
+            <h5>課題</h5>
+            <div class="paragraph">
+                <ul>
+                    <li>・1から50000までの和を出力する。</li>
+                    <li><strong>要提出</strong>・while文を使い数字当てゲームを作る。数字を当てるまで繰り返す。入力された数ではなかった場合その数より上か下か教える。</li>
+                    <li><strong>要提出</strong>・<a href="https://gist.github.com/YASAI03/12ec9d7626630f738d2937cdb03a25b3">九九列挙(クリックで説明を表示)</a></li>
+                </ul>
+            </div><br />
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

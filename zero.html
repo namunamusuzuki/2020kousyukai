@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>０章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+        <main>
+                <h1>目標</h1>
+                <div class="paragraph">
+                <p>　コンパイルを行う。講習会の雰囲気に慣れる。</p>
+                </div>
+                <h4>先輩からのお願い</h4>
+                <p>　1章からは各自で勉強していただくことになりますが、お願いが4つあります。</p>
+                <p>　・分からなかったらすぐ先輩に聞く。(多分優しく教えます。)</p>
+                <p>　・2日から3日で一つの章を終わらせるペースでやる。(テスト期間前に終わらせたいよね。) </p>
+                <p>　・部室には週2,3日程は来てほしい。(部活内交流とか進捗確認とか) </p>
+                <p>　・毎週金曜日17時からのミーティングには必ず来てほしい。 　テスト明けからはタスクによってはミーティングだけ出ればよくなります。 </p>
+                <h3>語句説明</h3>
+                <p>　・プログラム</p>
+                <p>　コンピューターが解釈・動作できるデータ。</p>
+                <p>　・プログラミング言語</p>
+                <p>　コンピュータに解釈できるようにつくられた人工言語。コンピューターへ指令を出すため使われる。</p>
+                <p>　・プログラミング</p>
+                <p>　 プログラミング言語を使用して、プログラムを作成すること。</p>
+                <p>　・C++</p>
+                <p>　　"しーぷらすぷらす"(読み方)というプログラミング言語。もっぱら"しーぷら"と呼ばれる。今から講習会で習っていく言語。</p>
+                <h3>サンプルコード</h3>
+                <pre><code>
+int main(void){
+
+    return 0;
+}
+</code></pre>
+<p>　　</p>
+                <p>　変数と型、constを理解し。変数に格納してからコンソール画面に出力できるようになろう。</p>
+                <div class="paragraph">
+                <h4>コードについて</h4>
+                 <p>　まずはコードの中身の解説に入る前に一部の記号がどんな役割を持つか説明します。</p>
+            
+                <h4>コメント</h4>
+                <p>
+                    　//←スラッシュ二つでその行全てを、<br />
+                    　/*<br />
+                    　↑<br />
+                    　スラッシュとアスタリスクで括ると、括った部分全てを、<br />
+                    　↓<br />
+                    　*/<br />
+                    　コメントアウトし、プログラムの動作には影響しなくなります。<br />
+                    　だから、
+                 <pre><code>
+int main(void){
+ /*
+    ヒャッハー！！！新鮮なコードだー！！！！！！！
+    何も起きない！！！！！！
+    */
+    return 0;
+}
+</code></pre>
+<p>　　</p>
+                <p>　とかやってもサンプルコードとやっていることは同じです。</p>
+                <h4>セミコロン</h4>
+                <p>　;←これのこと。文の終わりに<strong>必ず付けないといけません。</strong>付けないと何が起こるか気になる人は一度付けずに実行してみてください。</p><br />
+                <h4>インデント</h4>
+                <p>　{}内に入っているコードを1段ずらし、コードを見やすくするやり方。なるべく行うこと。</p>
+                <h4>全角文字</h4>
+                <p>　日本語や全角スペースのこと。コード内にコメント以外で入れてしまうとコードとして認識しなくなってしまうので気を付けよう。</p>
+                <h4>実行される順番</h4>
+                <p>　<strong>コードは上から下に向かって順番に実行されます。</strong>これは基本的にどんなコードでも同じです。</p>
+            </div>
+            <h3>サンプル解説</h3>
+            <p class="description">
+                1:int main(void){<br />
+                　　　ここに書いたことがプログラムとして実行されます。<br />
+                2:　　return 0;←これはプログラムの終わりを表します。<br />
+                3:}<br />
+            </p><br />
+            <h3>課題</h3>
+            <div class="paragraph">
+                <ul>
+                    <li>・Visual Studio(以下VS)を立ち上げて、サンプルコードを実行する。</li>
+                    <li>・コンソール画面に表示させる。やり方の手順は先輩に聞いて！</li>
+                    <li>EX(発展)・インデントをつける。</li>
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

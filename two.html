@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>２章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         </nav>
+        <main>
+           <h1>目標</h1>
+            <div class="paragraph">
+                
+                <p>　変数を使ってコンソール画面に文字、数字を出力出来るようになる。</p>
+            </div>
+       <h3>語句説明</h3>
+            <div class="paragraph">
+                <h2>変数</h2>
+                <p>　いわゆる箱。</p>
+                <h2>型</h2>
+                <p>　変数の形。形によって入れられるものが違う。</p>
+                <h2>変数名</h2>
+                <p>　変数を区別するための名前。</p>
+                <h2>宣言</h2>
+                <p>　この名前を使いますと知らせること。</p>
+            </div>
+            <h3>サンプル</h3>
+             <pre><code>
+#include &lt;iostream&gt;
+
+#include &lt;string&gt;
+
+
+
+int main(void){
+
+	int a = 5;
+
+	std::string b = "Hello";
+
+	char c = 'a';
+
+	double d = 3.141592;	
+
+	const int e = 10;
+
+	std::cout << a << std::endl;
+
+	std::cout << b << std::endl;
+
+	std::cout << c << std::endl;
+
+	std::cout << d << std::endl;
+
+	a = 50;
+
+	std::cout << a << std::endl;	
+
+	std::cout << e << std::endl; 
+
+	int f;
+
+  
+
+	return 0;
+
+}
+</code></pre>
+<p>　　</p>
+            <h3>サンプル解説</h3>
+            <div class="paragraph">
+                <h2>#include&lt;string&gt;</h2>
+                <p>　string型を使えるようにするための文。</p>
+                <h2>型の種類</h2>
+                <p>　主に使用することが多い型を書きます。</p>
+                <ul>
+                    <li>・int　整数を入れられる</li>
+                    <li>・double　少数を入れられる</li>
+                    <li>・float　少数を入れられる</li>
+                    <li>・char　文字を入れられる</li>
+                    <li>・string　文字列を入れられる</li>
+                </ul><br />
+                <h4>const</h4>
+                <p>　宣言時に文頭に書くことにより、変数の中身の変更が出来なくなるようになる。<br />　例えば、</p>
+                 <p class="description">
+                const int one_week = 7;
+one_week = 100;
+            <br />
+                <p>　とすることはできない。変わることのない数を扱うときに誤って変更しないようにするのが主な用途。</p> </p>
+                <h4>変数の宣言と初期化</h4>
+                <p class="description">
+                型 変数名 代入 int a = 10; double answer = 3.5; char dec; 
+           <br />
+                <p>
+                    　上に書いてあるような形で変数の宣言を行います。<br />
+                    　宣言と同時に代入することを初期化といいます。エラーが出るのを防止するために、初めのうちは<strong>必ず初期化をしてください。</strong><br />
+                    　宣言のみの場合だと中身には何が入っているか分かりません。変数に何が入っているか知りたい人は先輩に聞いてください。
+                </p> </p>
+                <h4>bool型</h4>
+                <p>　trueとfalseの2種類しか代入できない型です。後でやるif文などの条件文においてはtrueは真、falseは偽を表します。詳しくは５章で教えます。</p>
+                 </p>
+                
+                <h4>変数名の基本的な付け方</h4>
+                <p>
+                    　<strong>半角英数字(大文字も可)と一部の記号でつけなければなりません。</strong><br />
+                    　また、<strong>数字を先頭に付けてはいけません。</strong><br />
+                    　上の2つさえ守れば基本的にどんな変数名でも大丈夫ですが、分かりやすい変数名を付けることが大事です。<br />
+                    例)数を表す変数名<br />
+                    　n よりは number<br />
+                    　kazu よりは　number というように。
+                </p>
+            </div>
+            
+                
+            
+            <h5>課題</h5>
+            <ul>
+                <li>・サンプルコードを実行して出力を確かめる。</li>
+                <li><strong>要提出</strong>・変数に入れてから"Hello World!"を出力する。</li>
+                <li>・いろいろ変数に入れてみる。</li>
+            </ul>
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

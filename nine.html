@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>9章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         </nav>
+         </nav>
+     <main>
+            
+                <h1>目標</h1><div class="paragraph">
+                <p>　classを使えるようになる。</p>
+            </div>
+            <h3>語句説明</h3>
+            <div class="paragraph">
+                <h4>class</h4>
+                <p>
+                    新しい型を作るための構文。クラスって言います。
+                </p>
+            </div>
+            <h3>サンプル</h3>
+            <code><pre>
+#include &ltiostream&gt
+
+
+
+class Car {
+
+public:
+
+	double oil;
+	double mileage;
+
+
+	void run(){
+		double run_long;
+			std::cout << "走ってみる、どのくらい走るか入力する:";
+			std::cin >> run_long;
+			if (oil - run_long < 0) {
+				std::cout << "走ることができません！" << std::endl;
+				return;
+
+			}
+		oil -= run_long;
+		mileage += run_long;
+		std::cout << "走行完了、走行距離:" << run_long << std::endl;
+		return;
+	}
+
+	Car(){
+		oil = 0;
+		mileage = 0;
+	}
+
+private:
+
+};
+
+
+int main(void) {
+	Car normal_car;
+	normal_car.oil = 50;
+
+	std::cout << "現在の車の残油量:" << normal_car.oil << std::endl;
+	std::cout << "現在の車の総走行距離:" << normal_car.mileage << std::endl;
+
+	normal_car.run();
+
+	std::cout << "現在の車の残油量:" << normal_car.oil << std::endl;
+	std::cout << "現在の車の総走行距離:" << normal_car.mileage << std::endl;
+
+	return 0;
+}
+            </code></pre>
+            <h3>サンプル解説</h3>
+            <div class="paragraph">
+                <h4>クラスの作り方</h4>
+                <p class="description">
+	           class クラス名{<br />
+public:<br />
+プログラム内で使える変数、関数を宣言する。<br />
+クラス名(){<br />
+変数の初期化をする。<br />
+}<br />
+private:<br />
+クラス内でしか使えない変数、関数を宣言する。<br />
+}; ←セミコロンが必要。 
+			   <br />
+            </p><br />
+                </div>
+                <p>
+                    クラスには自由な名前の変数や関数を宣言することができます。
+                </p>
+                <h4>クラスの使い方</h4>
+                    <p>
+                        ・クラスを使った変数の宣言<br />
+                        クラス名 変数名;<br />
+                        ・変数、関数へのアクセス<br />
+                        main文で宣言した変数名.publicに書いた変数名(例 normal_car.oil)<br />
+                        main文でクラスを使って変数を宣言すると、あらかじめクラスに書いた変数を使うことができます。
+                    </p>
+                <h4>publicとprivate</h4>
+                <p>
+                    　publicに書いた変数や関数はmain文で宣言した変数でも使えます。<br />
+                    　それと違ってprivateに書いた変数や関数は、classの中身でしか使えません。main文などからのアクセスを防ぎ、関数などで不意に値を変更したくないときに役立ちます。　　　　　　　　　　　　　　
+                </p>
+                <h4>class内の変数の初期化</h4>
+                <p>
+                    　class内の変数は<br />
+                    　クラス名(){<br />
+                    　　　変数=代入;<br />
+                    　}<br />
+                    　で初期化してください。これも通常の変数同様、<strong>必ず初期化をしてください。</strong><br />
+                </p>
+                <p>
+                    　サンプルは車を模したクラスを作り、normal_carという車を宣言し、走らせています。
+                </p>
+           
+            <h5>課題</h5>
+            <ul>
+                <li>・サンプルコードを実行して出力を確かめる。</li>
+                <li><strong>要提出</strong>・人間を模したクラスを作れ。(main文不要)</li>
+            </ul>
+            </div>
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

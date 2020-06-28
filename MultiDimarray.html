@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>多次元配列</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+          <main>
+            
+                
+            <h3>多次元配列</h3><div class="paragraph">
+            <div class="paragraph">
+                <img src="double_array.PNG" width="400" height="250">
+                <p>
+                   上の図は3×3の二次元配列です。
+                </p>
+            </div>
+            <h3>サンプル</h3>
+            <code><pre>
+#include &ltiostream&gt
+#include &ltarray&gt
+
+int main(void) {
+	std::array< std::array< int, 3 >, 3 > arr1;
+	std::array< std::array< int, 3 >, 3 > arr2 = {};
+	std::array< std::array< int, 3 >, 3 > arr3 = { 1,2,3,4,5,6,7,8,9 };
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			std::cout << arr3[i][j] << " ";
+		}
+		
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			std::cout << "arr3[" << i << "][" << j << "] = " << arr3[i][j] << std::endl;
+		}
+
+	}
+
+	return 0;
+}
+            </code></pre>
+            <h3>サンプル解説</h3>
+            <div class="paragraph">
+               <p> arr1は宣言のみ、arr2は0で初期化。</p>
+               
+
+               <p> 　arr3は1から9までで初期化してます。
+                　サンプルコードを出力するとarr3の中身が分かります。
+            </p>
+            
+            </div>
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>

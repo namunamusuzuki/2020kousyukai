@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css" />
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="kosyukai_icon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+
+    <div id="contener">
+
+        <h1>C++講習会2019</h1>
+        <h2>5章</h2>
+
+
+        <nav class="navigation">
+
+            <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+
+            </ol>
+        </nav>
+
+        <main>
+            <h1>目標</h1>
+            <div class="paragraph">
+
+                <p>　条件によって行う処理を変更することができる。</p><br />
+            </div>
+            <h3>語句説明</h3>
+            <div class="paragraph">
+                <h4>条件式</h4>
+                <p>　結果がtrueかfalseになる式のこと。条件式の条件が満たされているときtrueになる、満たされていないときfalseになる。</p>
+                <h4>true/false</h4>
+                <p>　trueは正しい、falseは間違っていることを表す。</p><br />
+            </div>
+            <h3>サンプル１</h3>
+            <code>
+                <script src="https://gist.github.com/namunamusuzuki/94ebef84c06b0400d57da5b01aa968ee.js"></script>
+            </code>
+            <h3>サンプル１解説</h3>
+            <div class="paragraph">
+                <h2>条件式の中身</h2>
+                <p>
+                    条件式には、==同じ、!=異なる、>左より右の方が小さい、&lt;左より右の方が大きい、>=左が右以上、<=左が右以下<br />
+                    それ以外にもたくさんの種類があります。<br />
+                </p>
+                <h2>if()</h2>
+                <p>
+                    ifは、{}の中にある処理を条件式がtrueの場合実行します。<br />
+                    if(条件式){<br />
+                    処理<br />
+                    }<br />
+                </p>
+                <h2>else if()</h2>
+                <p>
+                    else ifは、{}の中にある処理をそれより上の条件式を満たさず、条件式がtrueの場合実行します。必ず、if、else ifの}につなげて使います。<br />
+                    if(){  ****処理****   }<br />
+                    else if(条件式){<br />
+                    処理<br />
+                    }<br />
+                </p>
+                <h2>else</h2>
+                <p>
+                    elseは、それより上の条件式を満たさず{}の中にある処理を実行します。必ず、if、else ifの}につなげて使います。<br />
+                    if(){  ****処理****   }<br />
+                    else {<br />
+                    処理<br />
+                    }<br />
+                </p>
+                <h2>switch-case文</h2>
+                <p>
+                    switch-caseはswitchの後にある変数と、caseの後にある変数が同じであればcaseより下の文を実行します。<br />
+                    defaultはcaseの条件に1つも当てはまらないときにdefaultより下の文を実行します。<br />
+                    switch(変数){<br />
+                    case 変数:<br />
+                    処理<br />
+                    break;←重要<br />
+                    default:<br />
+                    }<br />
+
+                    <h2>break</h2>
+                <p>
+                    この文が実行されると{}を1つ抜けます。使えるのは一部の{}内だけです。これより下の{}の文は無視されます。
+                </p><br />
+            </div>
+            <h3>サンプル２</h3>
+            <code>
+
+                <script src="https://gist.github.com/namunamusuzuki/1cea33f7c61872afbdd3c1368db3c507.js"></script>
+            </code>
+            <h3>サンプル2解説</h3>
+            <div class="paragraph">
+                <h2>条件式がbool型の場合</h2>
+                <p>
+                    もし<br />
+                    a==true<br />
+                    という条件式を書きたい場合tureの場合のみ<br />
+                    ==true<br />
+                    を省略することができます。<br />
+                    非0をtrue、0をfalseとして扱います。<br />
+                </p>
+
+            </div>
+            <h5>課題</h5>
+            <div class="paragraph">
+                <p>・サンプルコードを実行して出力を確かめる。</p>
+                <p>・簡単な電卓を作りましょう。2つの整数のみで構わないので標準入力より読み取って四則演算ができるようにしましょう。少数で表示してもいいですし、商と余りを出力しても大丈夫です。</p>
+                <p>・<a href="https://gist.github.com/namunamusuzuki/ad9ff0c9d3e2bf40088b41f1a7cc08f7">電卓がどうしてもわからない方</a></p>
+
+            </div><br />
+        </main>
+        <footer>
+
+            <div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

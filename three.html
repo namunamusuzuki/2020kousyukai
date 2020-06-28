@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<div id="contener">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+    <meta http-equiv="Content-Style-Type" contein="text/css />"
+    <title>C++講習会　TOP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico">
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="../lib/navigate_menu.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+
+
+
+<h1>C++講習会2019</h1>
+<h2>３章</h2>
+<h3>ソフトウェア研究部会へようこそ！</h3>
+<p>この講習会は、プログラミングの基礎を学ぶために作られたものです。<br/>
+最初は理解するのに時間がかかるかもしれませんが"やればやるだけ"<br/>
+身に付くので根気詰めすぎないよう頑張ってください。</p>
+
+<nav class="navigation">
+ 
+ <h3>講習一覧</h3>
+            <ol>
+                <li><a href="kosyukai2019.html"> TOP</a></li>
+                <li><a href="setup2019.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">0章</a></li>
+                <li><a href="one.html">1章</a></li>
+                <li><a href="two.html">2章</a></li>
+                <li><a href="three.html">3章</a></li>
+                <li><a href="four.html">4章</a></li>
+                <li><a href="five.html">5章</a></li>
+                <li><a href="six.html">6章</a></li>
+                <li><a href="seven.html">7章</a></li>
+                <li><a href="eight.html">8章</a></li>
+                <li><a href="nine.html">9章</a></li>
+                <li><a href="ten.html">10章</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+               
+            <ol style="display:none;">
+            </ol>
+ </nav>
+         </nav>
+         </nav>
+        <main>
+        <h1>目標</h1>
+            <div class="paragraph">
+                
+                <p>　四則演算ができるようになる。</p>
+            </div>
+            <h3>語句説明</h3>
+            <div class="paragraph">
+                <h2>算術演算子</h2>
+                <p>　+(足す)、-(引く)、*(かける)、/(割る)、%(余り)のこと。</p>
+            </div>
+            <pre><code>
+#include &ltiostream&gt
+#include &ltstring&gt
+
+
+int main(void) {
+	const int a = 5;
+	const int b = 2;
+
+	std::cout << a+b << " " << a-b << " " << a*b << " " << a/b << " " << a%b << std::endl;
+
+	std::string c = "sample";
+	std::string d = "code";
+
+	std::cout << c+d << std::endl;
+
+	int e = a+b;
+
+	e++;
+	
+	std::cout << e << std::endl;
+
+	e+=10;
+	std::cout << e << std::endl;
+
+	e--;
+	std::cout << e << std::endl;
+
+	return 0;
+}
+</code></pre>
+            <h3>サンプル解説</h3>
+            </p>
+                 <p class="description">
+                a+b,a-b,a*b<br />
+                そのまま。思ったまんまの答えが出ると思うよ。<br />
+                a/b<br />
+                いわゆる割り算の商を出す。整数同士の場合、少数は切り捨てられる。<br />
+                a%b<br />
+                いわゆる割り算の余りを出す。整数同士でしか使うことができない。<br />
+                e++,e--<br />
+                eの値を1増やす。1減らす。<br />
+                e+=10<br />
+                eの値を10増やす。-,*,/,%版もあるがあんまり使わないため詳しいことは自分で確かめてみよう。<br /><br />
+                c+d<br />
+                文字列同士を組み合わせ、別の文字列を作ることができる。+しかないので注意。
+            </p><br />
+            
+            <h5>課題</h5>
+            <div class="paragraph">
+                <ul>
+                    <li>・サンプルコードを実行して出力を確かめる。</li>
+                    <li>・算術演算子をいろいろ変えてみて出力を確かめる。</li>
+                </ul>
+            </div><br />
+        </main>
+        <footer>
+
+<div class="f3">
+                <h3>club official account</h3>
+                <ul>
+                    <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
+                </ul>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>
