@@ -1,4 +1,4 @@
-@charset"shift_jis";
+@charset"utf-8";
 
 * {
     color: #111111;
@@ -51,7 +51,7 @@ nav {
     vertical-align: middle;
     margin: 0px;
     padding: 10px 0;
-    background-color: #ad935e;
+    background-color: #ba936e;
     border-top: double 5px #f29305;
     border-bottom: double 5px #f29305;
 }
@@ -69,7 +69,7 @@ nav {
 }
 
     .navigation a:hover {
-        background-color: #b88040;
+        background-color: #c9b68b;
     }
 
 .navigation li {
@@ -103,57 +103,6 @@ main {
     margin-right: auto;
 }
 
-main h3 {
-    width: 746px;
-    padding: 8px;
-    margin-bottom: 14px;
-}
-
-
-
-main h3 {
-    font-size: 140%;
-    position: relative;
-    padding: 0.1em;
-    background: #a6d3c8;
-    color: white;
-}
-
-    main h3::before {
-        position: absolute;
-        content: '';
-        top: 100%;
-        left: 0;
-        border: none;
-        border-bottom: solid 15px transparent;
-        border-right: solid 20px rgb(149, 158, 155);
-    }
-
-main h2 {
-    font-size: 140%;
-    width: 740px;
-    padding: 8px;
-    margin-bottom: 4px;
-}
-
-
-main h2 {
-    font-size: 120%;
-    position: relative;
-    padding: 0.01em;
-    background: #a6bfbc;
-    color: white;
-}
-
-    main h2::before {
-        position: absolute;
-        content: '';
-        top: 100%;
-        left: 0;
-        border: none;
-        border-right: solid 20px rgb(149, 158, 155);
-    }
-
 main h1 {
     width: 749px;
     padding: 8px;
@@ -178,8 +127,62 @@ main h1 {
         border-right: solid 20px rgb(149, 158, 155);
     }
 
+main h2 {
+    font-size: 140%;
+    width: 739px;
+    padding: 8px;
+    margin-bottom: 4px;
+}
+
+
+main h2 {
+    font-size: 120%;
+    position: relative;
+    padding: 0.01em;
+    background: #a6bfbc;
+    color: white;
+}
+
+    main h2::before {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        border: none;
+        border-right: solid 20px rgb(149, 158, 155);
+    }
+
+main h3 {
+    width: 735px;
+    padding: 8px;
+    margin-bottom: 14px;
+}
+
+
+
+main h3 {
+    font-size: 140%;
+    position: relative;
+    padding: 0.1em;
+    background: #a6d3c8;
+    color: white;
+}
+
+    main h3::before {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 0;
+        border: none;
+        border-bottom: solid 15px transparent;
+        border-right: solid 20px rgb(149, 158, 155);
+    }
+
+
+
+
 main h4 {
-    width: 736px;
+    width: 735px;
     padding: 8px;
     margin-bottom: 4px;
 }
@@ -229,14 +232,15 @@ main h5 {
     }
 
 main p {
-    width: 750px;
+    margin-left: 10px;
+    width: 730px;
     padding: 4px 0;
     text-align: left;
 }
 
 main ul {
     margin-left: 10px;
-    width: 750px;
+    width: 730px;
     padding: 10px;
     list-style: none;
     text-align: left;
@@ -266,7 +270,7 @@ main ul {
 .description {
     border: 1px solid #000000;
     background-color: #DDDDDD;
-    margin-left: 0px;
+    margin-left: 10px;
     width: 562px;
 }
 
@@ -323,4 +327,11 @@ div#submenu ul li a:hover {
     text-decoration: underline;
 }
 
+.nandemo {
+    text-decoration: underline;
+}
+
+.hide {
+    color: #bfd1ae;
+}
 
