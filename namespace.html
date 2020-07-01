@@ -1,105 +1,85 @@
+
 <!DOCTYPE html>
-<div id="contener">
+
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
-    <meta http-equiv="Content-Style-Type" contein="text/css />"
-    <title>C++�u�K��@TOP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" contein="text/css" />
+    <title>C++講習会　TOP</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="kosyukai_icon.ico">
     <script src="../lib/jquery-3.1.1.min.js"></script>
     <script src="../lib/navigate_menu.js"></script>
     <script src="index.js"></script>
-    
+
 </head>
 <body>
 
+    <div id="contener">
+
+        <h1>C++講習会2020</h1>
+        <h2>名前空間</h2>
 
 
-<h1>C++�u�K��2019</h1>
-<h2>���O���</h2>
-<h3>�\�t�g�E�F�A��������ւ悤�����I</h3>
-<p>���̍u�K��́A�v���O���~���O�̊�b���w�Ԃ��߂ɍ��ꂽ���̂ł��B<br/>
-�ŏ��͗�������̂Ɏ��Ԃ������邩������܂���"���΂�邾��"<br/>
-�g�ɕt���̂ō��C�l�߂����Ȃ��悤�撣���Ă��������B</p>
 
+        <nav class="navigation">
 
-<nav class="navigation">
- 
- <h3>�u�K�ꗗ</h3>
+            <h3>講習一覧</h3>
             <ol>
-                <li><a href="kosyukai2019.html"> TOP</a></li>
-                <li><a href="setup2019.html">�v���W�F�N�g�쐬</a></li>
-                <li><a href="zero.html">0��</a></li>
-                <li><a href="one.html">1��</a></li>
-                <li><a href="two.html">2��</a></li>
-                <li><a href="three.html">3��</a></li>
-                <li><a href="four.html">4��</a></li>
-                <li><a href="five.html">5��</a></li>
-                <li><a href="six.html">6��</a></li>
-                <li><a href="seven.html">7��</a></li>
-                <li><a href="eight.html">8��</a></li>
-                <li><a href="nine.html">9��</a></li>
-                <li><a href="ten.html">10��</a></li>
-                <li><a href="MultiDimarray.html">�������z��</a></li>
-                <li><a href="namespace.html">���O���</a></li>
-               
-            <ol style="display:none;">
+                <li><a href="kosyukai2020.html"> TOP</a></li>
+                <li><a href="setup2020.html">プロジェクト作成</a></li>
+                <li><a href="zero.html">コンパイル</a></li>
+                <li><a href="one.html">出力</a></li>
+                <li><a href="two.html">表示</a></li>
+                <li><a href="three.html">算術演算子</a></li>
+                <li><a href="four.html">入力</a></li>
+                <li><a href="five.html">分岐</a></li>
+                <li><a href="six.html">繰り返し</a></li>
+                <li><a href="seven.html">配列</a></li>
+                <li><a href="eight.html">関数</a></li>
+                <li><a href="nine.html">クラス</a></li>
+                <li><a href="ten.html">最終試験</a></li>
+                <li><a href="MultiDimarray.html">多次元配列</a></li>
+                <li><a href="namespace.html">名前空間</a></li>
+
             </ol>
- </nav>
-         <main>
-            <h3>���O���</h3>
+        </nav>
+        <main>
+            <h3>名前空間</h3>
             <div class="paragraph">
-                <h3>���O���(namespace)�Ƃ�</h3>
-                <p>�C���[�W</p>
-                <img src="std.PNG" width="400" height="250">
+                <h3>名前空間(namespace)とは</h3>
+                <p>イメージ</p>
+                <img src="std.png" width="400" height="250">
                 <p>
-                    �@�F���񂪉��C�Ȃ��g���Ă���"std"�͖��O��Ԃ̖��̂ł��B��ʓI��C++�ɕW�����ڂ���Ă��郉�C�u�����̍\����"std"�̒��ɓ����Ă��܂��B<br />
-                    �@���O��Ԃ̒��ɓ����Ă���\���͒ʏ�A�\���̑O��"���O::"��t���Ȃ��Ƃ����܂���B(ex std::cout)
+                    皆さんが何気なく使っている"std"は名前空間の名称です。一般的にC++に標準搭載されているライブラリの構文は"std"の中に入っています。<br />
+                    名前空間の中に入っている構文は通常、構文の前に"名前::"を付けないといけません。(ex std::cout)
                 </p>
-                <h3>���O��Ԃ̍���</h3>
-                <code><pre>
-#include &ltiostream&gt
-
-namespace a{
-	class b{
-	public:
-		int c;
-	};
-}
-
-int main(void){
-	a::b d;
-
-	d.c = 10;
-	
-	std::cout << d.c << std::endl;
-
-	return 0;
-}
-                </code></pre> 
+                <h3>名前空間の作り方</h3>
+                <code>
+                    <script src="https://gist.github.com/HinoAyase/c0a199c1ce960a86cb03835b3891661d.js"></script>
+                </code>
                 <p class="description">
-               namespace ����{<br />
-                    �@�@���ɓ������̂������B<br />
+                    namespace 名称{<br />
+                    中に入れるものを書く。<br />
                     }
-            </p><br />
-                
+                </p><br />
+
                 <p>
-                    �@���O��Ԃ��g�����Ƃɂ���āA���̍\�����ǂ̂悤�Ȗ����������Ă��邩�܂Ƃ߂ċ�ʂ��邱�Ƃ��ł��܂��B<br />
-                    �@���Ȃ݂ɖ��O��Ԃ𖼑O��Ԃň͂����Ƃ��ł��܂��B
+                    名前空間を使うことによって、その構文がどのような役割を持っているかまとめて区別することができます。<br />
+                    ちなみに名前空間を名前空間で囲うこともできます。
                 </p>
                 <h2>using namespace std;</h2>
                 <p>
-                    �@������Ȃ��Ƃ��Ɍ�������Ƃ悭���̍\�����o�Ă��܂��B���̍\���̖�����"std"�Ƃ������O��Ԃ���ʂ��Ȃ��Ă悭�Ȃ邱�Ƃł��B<br />
-                    �@�Ⴆ�΁A"std::cout"��"cout"�����Ŏg����悤�ɂȂ�܂��B<br />
-                    �@������g�����_�Ƃ��Ă̓R�[�h�������ʂ��Z���Ȃ邽�߁A���Z�v���O���~���O�Ȃǂł悭�g�p����܂��B<br />
-                    �@�������A�����̃��C�u�������g���K�͂̑傫���J���̏ꍇ�ɂ́A���p�������邱�ƂŃR�[�h�����Â炭�Ȃ��Ă��܂�����A�ʂ̖��O��ԓ��ɂ��铯���\���ɂĂǂ̂悤�ɓ�����������Ȃ��Ȃ��Ă��܂����Ƃ�����̂ŁA�Ȃ�ׂ��g��Ȃ��悤�ɐS�����܂��傤�B
+                    分からないときに検索するとよくこの構文が出てきます。この構文の役割は"std"という名前空間を区別しなくてよくなることです。<br />
+                    例えば、"std::cout"を"cout"だけで使えるようになります。<br />
+                    これを使う利点としてはコードを書く量が短くなるため、競技プログラミングなどでよく使用されます。<br />
+                    しかし、複数のライブラリを使う規模の大きい開発の場合には、多用しすぎることでコードが見づらくなってしまったり、別の名前空間内にある同じ構文にてどのように動くか分からなくなってしまうことがあるので、なるべく使わないように心がけましょう。
                 </p>
             </div>
         </main>
         <footer>
 
-<div class="f3">
+            <div class="f3">
                 <h3>club official account</h3>
                 <ul>
                     <li>twitter:<a href="https://twitter.com/sofken_natori">@sofken-natori</a></li>
@@ -107,6 +87,6 @@ int main(void){
             </div>
         </footer>
 
-</div>
+    </div>
 </body>
 </html>
